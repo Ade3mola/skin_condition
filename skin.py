@@ -15,7 +15,7 @@ softmax = nn.Softmax(dim=1)
 transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.RandomHorizontalFlip(p=0.3),
-    transforms.ColorJitter(brightness=0.1, contrast=0.0, saturation=0.0, hue= 0.0),
+    transforms.ColorJitter(brightness=0, contrast=0, saturation=0, hue= 0),
     transforms.RandomRotation(15),
     transforms.Resize((224,224)),
     transforms.Normalize([0.485, 0.456, 0.406],[0.229, 0.224, 0.225])
